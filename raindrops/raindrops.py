@@ -1,10 +1,10 @@
 def raindrops(number):
-    factor_dict = {3: 'Pling', 5: 'Plang', 7: 'Plong'}
-    result = []
-    for i in factor_dict.keys():
-        if number % i == 0 and i in factor_dict:
-            result.append(factor_dict[i])
+    list_numbers=[3,5,7]
+    list_str=['Pling', 'Plang', 'Plong']
+    result = [j for i, j in zip(list_numbers, list_str) if number % i == 0]
     if result:
         return "".join(result)
     else:
         return str(number)
+
+
